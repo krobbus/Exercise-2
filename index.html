@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>GROUP 1_BSIT3G</title>
+  <style>
+    *{
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+    }
+    body{
+  
+      background-image: url(images/BG.jpg);
+      background-repeat: no-repeat;
+      background-attachment:fixed;
+      background-size: 100% 100%;
+    }
+    .wrap{
+      text-align: center;
+      padding: 200px 0 0;
+    }
+    h1{
+      font-size: 30px;
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 20px;
+      color: #fff;
+      margin-left: 430px;
+    }
+    #clock span{
+      display: inline;
+      width: 60px;
+      height: 50px;
+      line-height: 45px;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 5px 15px #3f58b5;
+      backdrop-filter: blur(20px);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: #fff;
+      margin: 0 10px;
+    }
+    #clock span:first-child{
+      margin-left: 60%;
+    }
+    #clock span:last-child{
+      background-color:#fff;
+      color: #000000;
+    }
+    #greeting{
+      background-color: rgba(255, 255, 255, 0.2);
+      display: inline-block;
+      border-radius: 4px;
+      font-size: 42px;
+      padding: 20px 50px;
+      margin-bottom: 10px;
+      box-shadow: 0 5px 15px#3f58b5;
+      animation: greeting 2s ease infinite 1s;
+    }
+  </style>
+</head>
+
+<body> 
+
+  <nav class="navbar">
+    <ul>
+        
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>  
+      <li><a href="">Contact</a></li> 
+          
+
+    </ul> 
+  
+  </nav>
+
+  <div>
+  <h1 id="greeting"></h1>
+  <h1 id="clock"></h1>
+</div>
+  <script>
+      function clock(){  
+      var date = new Date(); 
+      var hours = date.getHours(); 
+      var minutes = date.getMinutes();  
+      var seconds = date.getSeconds(); 
+      var midday; 
+
+      hours = updateTime(hours);
+      minutes = updateTime(minutes);
+      seconds = updateTime(seconds);
+      var char = "Bianca";
+
+      // IF ELSE CONDITION
+      midday = (hours >= 12) ? "PM" : "AM";
+
+      document.getElementById("clock").innerHTML = "<span>" + hours + "</span>" + ":" + "<span>" + minutes + "</span>" + ":" + 
+      "<span>" + seconds + "</span>" + "<span>" + midday + "</span>";
+
+      var time = setTimeout(function(){
+        clock();
+         
+      }, 1000);
+
+      //Good morning, afternoon, evening condition
+      if (hours < 12){
+        var greeting = "Good Morning";
+      }
+      if (hours >= 12 && hours <= 18){
+        var greeting = "Good Afternoon " + name;
+      }
+      if (hours >= 18 && hours <= 24){
+        var greeting = "Good Evening " + name;
+      }
+      
+      document.getElementById("greeting").innerHTML = greeting;
+  }
+      function updateTime(lang){
+        if(lang < 10){
+          return "0" + lang
+        } else {
+          return lang;
+        }
+      }
+
+      //call clock function
+      clock();
+
+
+  </script>
+  <div class="container swiper">
+    <div class="slider-wrapper">
+      <div class="card-list swiper-wrapper">
+        <div class="card-item swiper-slide">
+          <img src="images/img-1.jpg" alt="User Image" class="user-image">
+          <h2 class="user-name">Judel Colico</h2>
+          <p class="user-school">Pamantasan ng Lungsod ng Muntinlupa</p>
+          <h3 class="user-section">IT-3G</h3>
+          <button class="message-button">Message</button>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="images/img-2.jpg" alt="User Image" class="user-image">
+          <h2 class="user-name">Angeline Perez</h2>
+          <p class="user-school">Pamantasan ng Lungsod ng Muntinlupa</p>
+          <h3 class="user-section">IT-3G</h3>
+          <button class="message-button">Message</button>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="images/img-3.jpg" alt="User Image" class="user-image">
+          <h2 class="user-name">Gwen Hillary Otic</h2>
+          <p class="user-school">Pamantasan ng Lungsod ng Muntinlupa</p>
+          <h3 class="user-section">IT-3G</h3>
+          <button class="message-button">Message</button>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="images/img-4.jpg" alt="User Image" class="user-image">
+          <h2 class="user-name">Christa Bianca Cueno</h2>
+          <p class="user-school">Pamantasan ng Lungsod ng Muntinlupa</p>
+          <h3 class="user-section">IT-3G</h3>
+          <button class="message-button">Message</button>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="images/img-6.jpg" alt="User Image" class="user-image">
+          <h2 class="user-name">Alef Justin Loresca</h2>
+          <p class="user-school">Pamantasan ng Lungsod ng Muntinlupa</p>
+          <h3 class="user-section">IT-3G</h3>
+          <button class="message-button">Message</button>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-slide-button swiper-button-prev"></div>
+      <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+  </div>
+
+  <!-- Linking SwiperJS script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Linking custom script -->
+  <script src="script.js"></script>
+</body>
+</html>

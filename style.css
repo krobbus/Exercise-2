@@ -1,0 +1,126 @@
+/* Importing Google Font - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.navbar ul{
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0%;
+  margin: 0%;
+  overflow: hidden;
+}
+.navbar a{
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.navbar a:hover{
+  background-color:#2c3161 ;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+.navbar li{
+  float: left;
+}
+.slider-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 70px 55px;
+}
+
+.card-list .card-item {
+  height: 70vh;
+  color: #fff;
+  user-select: none;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-list .card-item .user-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 30%;
+  margin-bottom: 20px;
+  border: 2px solid #fff;
+  padding: 5px;
+}
+
+.card-list .card-item .user-section {
+  font-size: 1.15rem;
+  color: #e3e3e3;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.card-list .card-item .user-school {
+  font-size: 1rem;
+  color: #e3e3e3;
+  font-weight: 500;
+  margin-bottom: 5px;
+
+}
+
+.card-list .card-item .message-button {
+  width: 200px;
+  height: 200px; 
+  font-size: 1.25rem;
+  padding: 10px 50px;
+  color: #030728;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+}
+
+.card-list .card-item .message-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+  background: #fff;
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+}
+
+.slider-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.slider-wrapper .swiper-slide-button {
+  color: #fff;
+  margin-top: -55px;
+  transition: 0.10s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+  color: #4658ff;
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    margin: 0 10px 40px;
+  }
+
+  .slider-wrapper .swiper-slide-button {
+    display: none;
+  }
+}
